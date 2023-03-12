@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>WasteWise</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.css') }}" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href="{{ url_for('static', filename = 'css/styles.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename = 'css/responsive.css') }}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/services.css') }}">
+
+
+
+</head>
+<body>
+    <div class="hero_area sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{{url_for('index')}}">
+            <img src="{{ url_for('static', filename = 'images/logogo.png') }}" alt="" /><span>
+              Waste Wise
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('fruit')}}"> Dispose</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('chat')}}"> Bot </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('contact')}}">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('tracker')}}">Pick and Drop</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="https://waste-wise-7531b.web.app">
+                Chat
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <section id="two">
+      <h1 id="ourservices">Our Services</h1>
+      <div class="service-card1">
+        <div class="top-image"><img src="{{ url_for('static', filename = 'images/map.svg') }}" alt="map logo" srcset=""></div>
+        <h2>Drop-off</h2>
+        <p>Know our locations near you to drop-off your waste.</p>
+        <button class="know-more open-button" id="know-more" onclick="javascript:window.open('{{url_for('maps')}}','_blank')" formtarget="_blank"type="submit">Know more</button>
+        <h5 class="confirm" id="checkauth">Please sign-in to use our services</h5>
+        
+      </div>
+      <div class="service-card">
+        <div class="top-image"><img src="{{ url_for('static', filename = 'images/local_shipping.svg') }}" alt=""></div>
+        <h2>Pickup</h2>
+        <p>Want to schedule pickup with us?</p>
+        <button class="know-more" id="know-more1" onclick="javascript:window.open('{{url_for('pickup')}}','_blank')" formtarget="_blank" type="submit">Know more</button>
+        <h5 class="confirm" id="checkauth1">Please sign-in to use our services</h5>
+        <h5 class="confirm">You can schedule pickup once in a day.</h5>
+      </div>
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1wVQMAyyhIRm5XApdWf5GN7o9JAAKS0lR" width="580px" height="980" allowfullscreen="allowfullscreen"></iframe>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </section>
+
+
+
+  </div>
+   <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            Classification
+          </h5>
+          <ul>
+            <li>
+              Type 1
+            </li>
+            <li>
+              Type 2
+            </li>
+            <li>
+              Type 3
+            </li>
+            
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Services
+          </h5>
+          <ul>
+            <li>
+              Classification
+            </li>
+            <li>
+              Tracking
+            </li>
+            <li>
+              Disposal techniques
+            </li>
+           
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Information
+          </h5>
+          <ul>
+            <li>
+              Why waste disposal
+            </li>
+            <li>
+              Advantages of doing in proper way
+            </li>
+            <li>
+              Demerits
+            </li>
+           
+        </div>
+        <div class="col-md-3">
+          <div class="social_container">
+            <h5>
+              Follow Us
+            </h5>
+            <div class="social-box">
+              <a href="">
+                <img src="{{ url_for('static', filename = 'images/fb.png') }}" alt="">
+              </a>
+
+              <a href="">
+                <img src="{{ url_for('static', filename = 'images/twitter.png') }}" alt="">
+              </a>
+              <a href="">
+                <img src="{{ url_for('static', filename = 'images/linkedin.png') }}" alt="">
+              </a>
+              <a href="">
+                <img src="{{ url_for('static', filename = 'images/instagram.png') }}" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="subscribe_container">
+            <h5>
+              Contact us Now
+            </h5>
+            <div class="form_container">
+              <form action="">
+                <input type="email">
+                <button type="submit">
+                  Contact
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
